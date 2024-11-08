@@ -1,3 +1,3 @@
-import { router } from "./router";
+import { to } from "./router";
 
-router.request(window.location.pathname);
+to(window.location.pathname);

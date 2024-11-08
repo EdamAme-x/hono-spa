@@ -36,7 +36,9 @@ router.use("*", async (c, next) => {
 });
 
 window.addEventListener("popstate", () => {
-  router.request(window.location.pathname);
+  router.request(window.location.href);
 });
 
-export { router };
+export const to = (path: string) => {
+  router.request(window.location.origin + path);
+};
