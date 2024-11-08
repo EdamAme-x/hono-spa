@@ -8,6 +8,7 @@ export function Books() {
     <>
       <input
         type="text"
+        placeholder="Book ID"
         value={id}
         onChange={(e) => setId((e.target as HTMLInputElement).value)}
       />
