@@ -30,7 +30,7 @@ router.use("*", async (c, next) => {
   window.history.pushState(
     null,
     "",
-    c.req.url.replace(/localhost/, window.location.origin.split("://")[1]),
+    c.req.url,
   );
   createRoot(document.getElementById("root")!).render(c.get("component"));
 });
